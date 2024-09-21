@@ -1,7 +1,8 @@
-import { Box, FormControl, InputAdornment, OutlinedInput, Typography } from "@mui/material";
+import { FormControl, InputAdornment, OutlinedInput, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { useState } from "react";
 
-export default function Temperatures() {
+export default function TemperaturesForm() {
   const [celsius, setCelsius] = useState(0);
   const [fahrenheit, setFahrenheit] = useState(32);
   const [kelvin, setKelvin] = useState(273.15);
@@ -25,21 +26,7 @@ export default function Temperatures() {
   }
 
   return (
-    <Box
-      component="form"
-      sx={{ "& > :not(style)": { m: 1, width: "25ch" }, marginTop: "50px" }}
-      style={{
-        display: "grid",
-        justifyContent: "center",
-        margin: "auto",
-        width: "50%",
-        marginTop: "50px",
-        textAlign: "center",
-        backgroundColor: "silver",
-      }}
-      noValidate
-      autoComplete="off"
-    >
+    <Box>
       <FormControl sx={{ m: 1, width: "25ch" }} variant="outlined">
         <Typography>Celsius:</Typography>
         <OutlinedInput
@@ -75,7 +62,7 @@ export default function Temperatures() {
       <Typography style={{ textAlign: "center" }}>and</Typography>
 
       <FormControl sx={{ m: 1, width: "25ch" }} variant="outlined">
-        <Typography>kelvin:</Typography>
+        <Typography>Kelvin:</Typography>
         <OutlinedInput
           id="kelvin-input"
           value={kelvin}

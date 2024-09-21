@@ -1,4 +1,4 @@
-import Temperatures from "./components/Temperatures";
+import Temperatures from "./components/Temperatures/Temperatures";
 import Header from "./components/Header";
 
 import { createTheme, CssBaseline } from "@mui/material";

@@ -6,7 +6,7 @@ In this web application you can make conversions and calculations.
 
 In the project directory, you can run:
 
-- `npm run dev`
+- `npm run start`
 - `npm run build`
 - `npm run lint`
 - `npm run preview`
