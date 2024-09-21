@@ -34,7 +34,6 @@ export default function Temperatures() {
         width: "50%",
         marginTop: "50px",
       }}
-      bgcolor={green[300]}
       noValidate
       autoComplete="off"
     >
