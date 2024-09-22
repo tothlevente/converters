@@ -13,8 +13,7 @@ export default function Temperatures() {
         flexDirection: "column",
         alignItems: "center",
         textAlign: "center",
-        marginTop: "50px",
-        marginBottom: "50px",
+        margin: "50px",
       }}
     >
       <TemperaturesLogo width={50} height={50} color={red[500]} />

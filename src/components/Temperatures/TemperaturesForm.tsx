@@ -1,4 +1,5 @@
-import { FormControl, InputAdornment, OutlinedInput, Typography } from "@mui/material";
+import TemperaturesFormControl from "./TemperaturesFormControl";
+
 import { Box } from "@mui/material";
 import { useState } from "react";
 
@@ -26,55 +27,27 @@ export default function TemperaturesForm() {
   }
 
   return (
-    <Box>
-      <FormControl sx={{ m: 1, width: "25ch" }} variant="outlined">
-        <Typography>Celsius:</Typography>
-        <OutlinedInput
-          id="celsius-input"
-          value={celsius}
-          endAdornment={<InputAdornment position="end">C</InputAdornment>}
-          aria-describedby="celsius-input"
-          onChange={(e) => handleCelsius(Number(e.target.value))}
-          inputProps={{
-            "aria-label": "weight",
-          }}
-          fullWidth
-        />
-      </FormControl>
+    <Box sx={{ textAlign: "center" }}>
+      <TemperaturesFormControl
+        name="Celsius"
+        adornment="C"
+        value={celsius}
+        handleChange={handleCelsius}
+      />
 
-      <Typography style={{ textAlign: "center" }}>is equal</Typography>
+      <TemperaturesFormControl
+        name="Fahrenheit"
+        adornment="F"
+        value={fahrenheit}
+        handleChange={handleFahrenheit}
+      />
 
-      <FormControl sx={{ m: 1, width: "25ch" }} variant="outlined">
-        <Typography>Fahrenheit:</Typography>
-        <OutlinedInput
-          id="fahrenheit-input"
-          value={fahrenheit}
-          endAdornment={<InputAdornment position="end">F</InputAdornment>}
-          aria-describedby="fahrenheit-input"
-          onChange={(e) => handleFahrenheit(Number(e.target.value))}
-          inputProps={{
-            "aria-label": "weight",
-          }}
-          fullWidth
-        />
-      </FormControl>
-
-      <Typography style={{ textAlign: "center" }}>and</Typography>
-
-      <FormControl sx={{ m: 1, width: "25ch" }} variant="outlined">
-        <Typography>Kelvin:</Typography>
-        <OutlinedInput
-          id="kelvin-input"
-          value={kelvin}
-          endAdornment={<InputAdornment position="end">K</InputAdornment>}
-          aria-describedby="kelvin-input"
-          onChange={(e) => handleKelvin(Number(e.target.value))}
-          inputProps={{
-            "aria-label": "weight",
-          }}
-          fullWidth
-        />
-      </FormControl>
+      <TemperaturesFormControl
+        name="Kelvin"
+        adornment="K"
+        value={kelvin}
+        handleChange={handleKelvin}
+      />
     </Box>
   );
 }
