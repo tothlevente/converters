@@ -23,8 +23,8 @@ export default function Home() {
         Converters
       </Typography>
       <Typography variant="subtitle1" sx={{ marginBottom: "15px", maxWidth: "500px" }}>
-        With the help of this website, you can easily convert different units of measurement. In
-        the future, the range of convertible measurement units will expand.
+        With the help of this website, you can easily convert different units of measurement. The
+        range of convertible measurement units will expand later.
       </Typography>
       <Typography variant="subtitle1" sx={{ marginBottom: "15px", maxWidth: "500px" }}>
         Choose a category to get started:

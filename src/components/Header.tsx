@@ -1,6 +1,7 @@
 import { AppBar, Box, Button, Toolbar, Tooltip, Typography } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
-import { green, grey } from "@mui/material/colors";
+import { grey } from "@mui/material/colors";
+import { global } from "../theme";
 
 import Logo, { HomeLogo, TemperaturesLogo } from "./Logo";
 
@@ -16,7 +17,7 @@ export default function Header() {
         <Toolbar style={{ display: "flex", justifyContent: "space-between" }}>
           <Link to={"/"} style={{ textDecoration: "none", color: grey[50] }}>
             <div style={{ display: "flex", textAlign: "center", alignItems: "center" }}>
-              <Logo width={26} height={26} color={green[300]} />
+              <Logo width={26} height={26} color={global.green} />
               <Typography sx={{ paddingLeft: "10px" }}>Converters</Typography>
             </div>
           </Link>
