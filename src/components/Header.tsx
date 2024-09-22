@@ -1,5 +1,5 @@
 import { AppBar, Box, Button, Toolbar, Tooltip, Typography } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { green, grey } from "@mui/material/colors";
 
 import Logo, { HomeLogo, TemperaturesLogo } from "./Logo";
@@ -14,15 +14,18 @@ export default function Header() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar style={{ display: "flex", justifyContent: "space-between" }}>
-          <div style={{ display: "flex", textAlign: "center", alignItems: "center" }}>
-            <Logo width={26} height={26} color={green[300]} />
-            <Typography sx={{ paddingLeft: "10px" }}>Converters</Typography>
-          </div>
+          <Link to={"/"} style={{ textDecoration: "none", color: grey[50] }}>
+            <div style={{ display: "flex", textAlign: "center", alignItems: "center" }}>
+              <Logo width={26} height={26} color={green[300]} />
+              <Typography sx={{ paddingLeft: "10px" }}>Converters</Typography>
+            </div>
+          </Link>
           <div>
             <Tooltip title="Home">
               <Button
+                color="secondary"
                 variant="contained"
-                sx={{ marginRight: "10px", backgroundColor: green[300], color: grey[800] }}
+                sx={{ marginRight: "10px" }}
                 onClick={() => navigate("/")}
               >
                 <HomeLogo width={width} height={height} />
@@ -30,8 +33,9 @@ export default function Header() {
             </Tooltip>
             <Tooltip title="Temperatures">
               <Button
+                color="secondary"
                 variant="contained"
-                sx={{ marginRight: "10px", backgroundColor: green[300], color: grey[800] }}
+                sx={{ marginRight: "10px" }}
                 onClick={() => navigate("/temperatures")}
               >
                 <TemperaturesLogo width={width} height={height} />

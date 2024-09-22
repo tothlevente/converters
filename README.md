@@ -2,6 +2,10 @@
 
 In this web application you can make conversions and calculations.
 
+## Available conversion categories:
+
+- Temperatures
+
 ## Available scripts:
 
 In the project directory, you can run:

@@ -3,6 +3,7 @@ import * as ReactDOM from "react-dom/client";
 
 import Temperatures from "./components/Temperatures/Temperatures";
 import ErrorPage from "./components/ErrorPage";
+import Home from "./components/Home";
 import Root from "./Root";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -12,7 +13,7 @@ import "./index.css";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root element={<div></div>} />,
+    element: <Root element={<Home />} />,
     errorElement: <Root element={<ErrorPage />} />,
   },
   {

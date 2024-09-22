@@ -1,3 +1,4 @@
+import TemperaturesFormulas from "./TemperaturesFormulas";
 import TemperaturesForm from "./TemperaturesForm";
 
 import { grey, red } from "@mui/material/colors";
@@ -26,6 +27,7 @@ export default function Temperatures() {
         places.
       </Typography>
       <TemperaturesForm />
+      <TemperaturesFormulas />
     </Box>
   );
 }
