@@ -34,14 +34,12 @@ export default function TemperaturesForm() {
         value={celsius}
         handleChange={handleCelsius}
       />
-
       <TemperaturesFormControl
         name="Fahrenheit"
         adornment="F"
         value={fahrenheit}
         handleChange={handleFahrenheit}
       />
-
       <TemperaturesFormControl
         name="Kelvin"
         adornment="K"

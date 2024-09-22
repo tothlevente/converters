@@ -23,7 +23,9 @@ export default function TemperaturesFormControl({
         value={value}
         endAdornment={<InputAdornment position="end">{adornment}</InputAdornment>}
         aria-describedby={`${name}-input`}
-        onChange={(e) => handleChange(Number(e.target.value))}
+        onChange={(e) =>
+          handleChange(isNaN(Number(e.target.value)) ? 0 : Number(e.target.value))
+        }
         inputProps={{
           "aria-label": "weight",
         }}
