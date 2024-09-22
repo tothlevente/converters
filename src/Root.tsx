@@ -1,4 +1,3 @@
-import Temperatures from "./components/Temperatures/Temperatures";
 import Header from "./components/Header";
 
 import { createTheme, CssBaseline } from "@mui/material";
@@ -23,12 +22,12 @@ const theme = createTheme({
   },
 });
 
-export default function App() {
+export default function Root({ element }: any) {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Header />
-      <Temperatures />
+      {element}
     </ThemeProvider>
   );
 }
